@@ -56,7 +56,7 @@ stats_container = st.container()
 with header_container:
 
 	# for example a logo or a image that looks like a website header
-	st.image('sandiplogo.png')
+	#st.image('sandiplogo.png')
 
 	# different levels of text you can include in your app
 	st.title("A cool new Streamlit app")
