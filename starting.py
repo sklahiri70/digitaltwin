@@ -1,6 +1,6 @@
 import os
 
-os.system("cd san")
-os.system("streamlit run demo6.py")
+os.system("cd sandemo")
+os.system("streamlit run app.py")
 
 
