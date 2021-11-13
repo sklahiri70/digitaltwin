@@ -135,15 +135,3 @@ else:
     fig1 = px.scatter_matrix(df, dimensions=["x", "y", "z", "a"])
     col1.plotly_chart(fig1)
 
-# The function returns a counter for number of refreshes. This allows the
-# ability to make special requests at different intervals based on the count
-if count == 0:
-    st.write("Count is zero")
-elif count % 3 == 0 and count % 5 == 0:
-    st.write("FizzBuzz")
-elif count % 3 == 0:
-    st.write("Fizz")
-elif count % 5 == 0:
-    st.write("Buzz")
-else:
-    st.write(f"Count: {count}")
