@@ -56,21 +56,21 @@ st.markdown(
 
 
 # here is how to create containers
-header_container = st.container()
-stats_container = st.container()	
+#header_container = st.container()
+#stats_container = st.container()	
 #######################################
 
 
 
 # You can place things (titles, images, text, plots, dataframes, columns etc.) inside a container
-with header_container:
+#with header_container:
 
 	# for example a logo or a image that looks like a website header
 	#st.image('sandiplogo.png')
 
 	# different levels of text you can include in your app
-	st.title("Digital Twin Application")
-	st.header("Developed By Scientific Design Company Inc")
+st.title("Digital Twin Application")
+st.header("Developed By Scientific Design Company Inc")
 	#st.subheader("This is a great app")
 	#st.write("check it for yourself, if you don't believe me")
 
