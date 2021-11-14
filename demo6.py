@@ -8,7 +8,11 @@ import streamlit as st
 import plotly.express as px
 #######################################
 
+from streamlit_autorefresh import st_autorefresh
 
+# Run the autorefresh about every 2000 milliseconds (2 seconds) and stop
+# after it's been refreshed 100 times.
+count = st_autorefresh(interval=2000, limit=10, key="fizzbuzzcounter")
 
 
 ####################################
@@ -79,7 +83,7 @@ sheet_name = 'Sheet1'
 df = pd.read_excel(excel_file,
                    sheet_name=sheet_name,
                    usecols='A:F',
-                   header=4)
+                   header=3)
 
 col1, col2,col3 = st.columns(3)
 
@@ -131,3 +135,15 @@ else:
     fig1 = px.scatter_matrix(df, dimensions=["x", "y", "z", "a"])
     col1.plotly_chart(fig1)
 
+# The function returns a counter for number of refreshes. This allows the
+# ability to make special requests at different intervals based on the count
+if count == 0:
+    st.write("Count is zero")
+elif count % 3 == 0 and count % 5 == 0:
+    st.write("FizzBuzz")
+elif count % 3 == 0:
+    st.write("Fizz")
+elif count % 5 == 0:
+    st.write("Buzz")
+else:
+    st.write(f"Count: {count}")
