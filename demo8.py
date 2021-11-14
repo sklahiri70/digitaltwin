@@ -43,14 +43,14 @@ from PIL import Image
 
 
 # You can place things (titles, images, text, plots, dataframes, columns etc.) inside a container
-with header_container:
+
 
 	# for example a logo or a image that looks like a website header
 	#st.image('sandiplogo.png')
 
 	# different levels of text you can include in your app
-	st.title("Digital Twin Application")
-	st.header("Developed By Scientific Design Company Inc")
+	#st.title("Digital Twin Application")
+	#st.header("Developed By Scientific Design Company Inc")
 	#st.subheader("This is a great app")
 	#st.write("check it for yourself, if you don't believe me")
 
