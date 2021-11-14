@@ -65,7 +65,7 @@ df = pd.read_excel(excel_file,
                    usecols='A:F',
                    header=3)
 
-col1, col2,col3 = st.columns(3)
+
 
 
 selectbox = st.sidebar.selectbox(
@@ -95,8 +95,8 @@ if (selectbox == 'Bar'):
                             text='x',
                             color_discrete_sequence = ['#F63366']*len(df),
                             template= 'plotly_white')
-#st.plotly_chart(bar_chart)
-	 col1.plotly_chart(bar_chart)
+st.plotly_chart(bar_chart)
+	# col1.plotly_chart(bar_chart)
 
 
 #write this code in command prompt
@@ -107,11 +107,12 @@ elif (selectbox == 'Line'):
 	#plotly line chart
      fig = px.line(df, x="x", y="y")
 #fig.show()
-	#st.plotly_chart(fig)
-     col1.plotly_chart(fig)
+	st.plotly_chart(fig)
+     #col1.plotly_chart(fig)
 
 else:
 #if (selectbox == 'Matrix'):
     fig1 = px.scatter_matrix(df, dimensions=["x", "y", "z", "a"])
-    col1.plotly_chart(fig1)
+    %col1.plotly_chart(fig1)
+    st.plotly_chart(fig1)
 
