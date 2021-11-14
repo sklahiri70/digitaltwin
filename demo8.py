@@ -19,24 +19,7 @@ from PIL import Image
 # TODO: Change values below and observer the changes in your app
 
 
-st.markdown(
-        f"""
-<style>
-    .reportview-container .main .block-container{{
-        max-width: 90%;
-        padding-top: 1rem;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        padding-bottom: 1rem;
-    }}
-    img{{
-    	max-width:40%;
-    	margin-bottom:40px;
-    }}
-</style>
-""",
-        unsafe_allow_html=True,
-    )
+
 
 
 #######################################
