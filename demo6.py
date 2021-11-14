@@ -8,7 +8,7 @@ import streamlit as st
 import plotly.express as px
 #######################################
 
-from streamlit_autorefresh import st_autorefresh
+#from streamlit_autorefresh import st_autorefresh
 
 # Run the autorefresh about every 2000 milliseconds (2 seconds) and stop
 # after it's been refreshed 100 times.
